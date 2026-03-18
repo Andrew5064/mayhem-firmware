@@ -253,8 +253,8 @@ set(EXTCPPSRC
 	external/blackjack/ui_blackjack.cpp
 
 	#battleship  256 byte
-	external/battleship/main.cpp
-	external/battleship/ui_battleship.cpp
+	#external/battleship/main.cpp
+	#external/battleship/ui_battleship.cpp
 
 	#ert 3040 bytes - has common with baseband, could be renamed the namespace, so both could have it, but not kept in fw.
 	external/ert/main.cpp
@@ -404,7 +404,7 @@ set(EXTAPPLIST
 	fpv_detect
 	spaceinv
 	blackjack
-	battleship
+	#battleship
 	ert
 	epirb_rx
 	epirb_tx

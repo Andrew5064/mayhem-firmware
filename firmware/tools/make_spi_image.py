@@ -174,7 +174,7 @@ if len(sys.argv) != 5:
 application_image = read_image(sys.argv[1])
 baseband_image = read_image(sys.argv[2])
 output_path = sys.argv[3]
-spi_size = int(sys.argv[4], 0)
+spi_size = int(sys.argv[4], 0)+40000
 
 print("\ncheck gcc versions from all elf target\n")
 application_gcc_versions = get_gcc_version_from_elf_files_in_giving_path_or_filename_s_path(sys.argv[1])
