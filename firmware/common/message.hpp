@@ -1197,15 +1197,15 @@ class SSTVConfigureMessage : public Message {
 };
 
 class SSTVRXConfigureMessage : public Message {
-   public:
-    constexpr SSTVRXConfigureMessage(
-        const uint8_t code)
-        : Message{id : ID::SSTVRXConfigure},
+public:
+    constexpr SSTVRXConfigureMessage(uint8_t code)
+        : Message(ID::SSTVRXConfigure), // виклик конструктора Message
           code(code) {
     }
 
     const uint8_t code;
 };
+
 
 class SSTVRXProgressMessage : public Message {
    public:

@@ -36,6 +36,19 @@
 #include <cstring>
 #include <string_view>
 
+extern "C" {
+#include <sys/types.h>
+#include <errno.h>
+#include <unistd.h>
+
+// Мінімальна заглушка: malloc/new завжди повертають помилку
+caddr_t _sbrk(int incr) {
+    (void)incr;        // щоб прибрати warning про невикористаний параметр
+    errno = ENOMEM;
+    return (caddr_t)-1;
+}
+}
+
 namespace fs = std::filesystem;
 using namespace portapack;
 

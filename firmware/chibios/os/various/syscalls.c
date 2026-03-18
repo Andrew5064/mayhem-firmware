@@ -72,6 +72,14 @@
 
 /***************************************************************************/
 
+extern caddr_t _sbrk_r(struct _reent *r, int incr);
+
+caddr_t _sbrk(int incr) {
+    extern struct _reent *_impure_ptr;
+    return _sbrk_r(_impure_ptr, incr);
+}
+
+
 int _read_r(struct _reent *r, int file, char * ptr, int len)
 {
   (void)r;

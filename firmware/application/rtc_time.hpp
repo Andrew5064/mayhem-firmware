@@ -22,7 +22,7 @@
 
 #ifndef __RTC_TIME_H__
 #define __RTC_TIME_H__
-
+#include <ctime>
 #include "signal.hpp"
 
 #include "lpc43xx_cpp.hpp"

@@ -29,6 +29,20 @@
 #include "gpdma.hpp"
 #include "audio_dma.hpp"
 
+extern "C" {
+#include <sys/types.h>
+#include <errno.h>
+#include <unistd.h>
+
+// Мінімальна заглушка: malloc/new завжди повертають помилку
+caddr_t _sbrk(int incr) {
+    (void)incr;        // щоб прибрати warning про невикористаний параметр
+    errno = ENOMEM;
+    return (caddr_t)-1;
+}
+}
+
+
 static void init() {
     // Audio DMA initialization was moved to baseband proc's that actually use DMA audio, to save memory.
     nvicEnableVector(DMA_IRQn, CORTEX_PRIORITY_MASK(LPC_DMA_IRQ_PRIORITY));
