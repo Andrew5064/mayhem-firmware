@@ -200,8 +200,8 @@ set(EXTCPPSRC
 	external/playlist_editor/ui_playlist_editor.cpp
 
 	#snake 240 bytes
-	external/snake/main.cpp
-	external/snake/ui_snake.cpp
+	#external/snake/main.cpp
+	#external/snake/ui_snake.cpp
 
 
 	#stopwatch 0
@@ -213,12 +213,12 @@ set(EXTCPPSRC
 	external/breakout/ui_breakout.cpp
 
 	#dinogame 0 
-	external/dinogame/main.cpp
-	external/dinogame/ui_dinogame.cpp
+	#external/dinogame/main.cpp
+	#external/dinogame/ui_dinogame.cpp
 
 	#doom 224
-	external/doom/main.cpp
-	external/doom/ui_doom.cpp
+	#external/doom/main.cpp
+	#external/doom/ui_doom.cpp
 
 	#debug_pmem  944 byte
 	external/debug_pmem/main.cpp
@@ -390,11 +390,11 @@ set(EXTAPPLIST
 	view_wav
 	sd_wipe
 	playlist_editor
-	snake
+	#snake
 	stopwatch
 	breakout
-	dinogame
-	doom
+	#dinogame
+	#doom
 	debug_pmem
 	scanner
 	level
